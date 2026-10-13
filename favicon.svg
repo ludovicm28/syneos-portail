@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SYNÉOS">
+  <rect width="64" height="64" rx="14" fill="#08192d"/>
+  <path d="M32 7 57 32 32 57 7 32Z" fill="none" stroke="#dceaf0" stroke-width="3"/>
+  <path d="M32 15v13M49 32H36M32 49V36M15 32h13" stroke-width="6" stroke-linecap="round" stroke="#ee8655"/>
+  <path d="M49 32H36" stroke="#e36f58" stroke-width="6" stroke-linecap="round"/>
+  <path d="M32 49V36" stroke="#73c699" stroke-width="6" stroke-linecap="round"/>
+  <path d="M15 32h13" stroke="#d5ad63" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="5" fill="#edf4f8"/>
+</svg>
