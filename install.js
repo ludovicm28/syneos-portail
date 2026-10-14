@@ -10,7 +10,7 @@
   let prompt = null;
   const iphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (iphone) {
-    copy.textContent = 'Pour installer SYNÉOS sur cet iPhone : dans Safari, touchez Partager puis « Sur l’écran d’accueil ».';
+    copy.textContent = 'Pour installer SYNÉOS sur cet iPhone : ouvrez cette adresse dans l’application Safari (pas depuis Caméra), puis touchez Partager et « Sur l’écran d’accueil ».';
     install.hidden = true;
     bar.hidden = false;
   }
