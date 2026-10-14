@@ -1,5 +1,5 @@
-const CACHE = 'syneos-portal-v2';
-const SHELL = ['/', '/index.html', '/mobile.css', '/launch.js', '/install.js', '/favicon.svg', '/icon-192.png', '/icon-512.png', '/manifest.json', '/mateos/', '/mateos/mateos_logo_horizontal.png'];
+const CACHE = 'syneos-portal-v3';
+const SHELL = ['/', '/index.html', '/mobile.css', '/launch.js', '/install.js', '/favicon.svg', '/apple-touch-icon.png', '/icon-192.png', '/icon-512.png', '/manifest.json', '/mateos/', '/mateos/mateos_logo_horizontal.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });
