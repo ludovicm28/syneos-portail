@@ -1,0 +1,27 @@
+@media (max-width: 700px) {
+  html { scroll-behavior: smooth; }
+  body { min-width: 0; }
+  .shell { padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+  header { min-height: 82px; }
+  .brand, .brand > div:last-child, .card-head > div { min-width: 0; }
+  .brand-sub, .acronym, .desc { overflow-wrap: anywhere; }
+  .mark { flex: none; }
+  .brand-sub { font-size: 10px; letter-spacing: .01em; text-transform: none; }
+  main { padding-top: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .card { min-width: 0; padding: 18px; min-height: 0; }
+  .card-head { gap: 13px; }
+  .icon { width: 54px; height: 54px; object-fit: contain; flex: none; }
+  .name { font-size: 23px; }
+  .acronym { font-size: 12px; line-height: 1.35; }
+  .desc { min-height: 0; margin: 12px 0; font-size: 13px; line-height: 1.45; }
+  .stage { margin-bottom: 14px; }
+  .open { display: flex; align-items: center; justify-content: space-between; min-height: 48px; font-size: 15px; }
+  footer { margin-top: 25px; }
+}
+
+.install-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 20px; padding: 12px 15px; border: 1px solid #4a7089; border-radius: 10px; background: #13314a; color: #e5f1f7; font-size: 13px; line-height: 1.4; }
+.install-bar[hidden] { display: none; }
+.install-bar button { min-height: 42px; padding: 8px 14px; border: 1px solid #e4ab6c; border-radius: 7px; background: #e4a468; color: #102235; font: inherit; font-weight: 750; cursor: pointer; }
+.install-bar .install-close { min-width: 42px; padding: 8px; margin-left: auto; border-color: #648098; background: transparent; color: #e5f1f7; }
+@media (max-width: 700px) { .install-bar { align-items: flex-start; } .install-bar span { flex-basis: 100%; } }

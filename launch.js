@@ -30,7 +30,8 @@
   for (const link of document.querySelectorAll('a.open[href^="https://"]')) {
     link.addEventListener('click', async event => {
       if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      const destination = new URL(link.href);
+      const useMobile = window.matchMedia('(max-width: 700px)').matches;
+      const destination = new URL(useMobile && link.dataset.mobileHref ? link.dataset.mobileHref : link.href);
       if (destination.hostname !== 'main-courante-web.onrender.com' && destination.hostname !== 'plan-de-crise-web.onrender.com' && destination.hostname !== 'registre-de-securite-web.onrender.com') return;
       event.preventDefault();
       stop();
