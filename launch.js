@@ -30,6 +30,9 @@
   for (const link of document.querySelectorAll('a.open[href^="https://"]')) {
     link.addEventListener('click', async event => {
       if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      // A different origin opened inside the installed desktop PWA gets a browser-owned address bar.
+      // Keep the link's target="_blank" so Chrome opens the application in its own browser tab.
+      if (window.matchMedia('(display-mode: standalone)').matches && !window.matchMedia('(max-width: 700px)').matches) return;
       const useMobile = window.matchMedia('(max-width: 700px)').matches;
       const destination = new URL(useMobile && link.dataset.mobileHref ? link.dataset.mobileHref : link.href);
       if (destination.hostname !== 'main-courante-web.onrender.com' && destination.hostname !== 'plan-de-crise-web.onrender.com' && destination.hostname !== 'registre-de-securite-web.onrender.com') return;
